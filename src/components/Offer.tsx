@@ -8,7 +8,7 @@ const Offer = () => {
       {/* TEXT CONTAINER */}
       <div className='flex-1 flex flex-col justify-center items-center text-center gap-8 p-6'>
         <h1 className='text-white text-5xl font-bold xl:text-6xl'>Delicious Burger & French Fry</h1>
-        <p className='text-white xl:text-xl'> "Indulge in the mouthwatering delight of our signature Delicious Burger & French Fry combo. Sink your teeth into a perfectly grilled, juicy burger crafted to perfection, featuring a succulent patty made from the finest blend of premium beef, seasoned with our secret blend of spices. Each bite bursts with flavor, offering a tantalizing symphony of tastes that will leave your taste buds dancing with joy."</p>
+        <p className='text-white xl:text-xl'> Indulge in the mouthwatering delight of our signature Delicious Burger & French Fry combo. Sink your teeth into a perfectly grilled, juicy burger crafted to perfection, featuring a succulent patty made from the finest blend of premium beef, seasoned with our secret blend of spices. Each bite bursts with flavor, offering a tantalizing symphony of tastes that will leave your taste buds dancing with joy.</p>
               <CountDown/>
         <button className='bg-red-500 text-white rounded-md py-3 px-6'>Order Now</button>
       </div> 
