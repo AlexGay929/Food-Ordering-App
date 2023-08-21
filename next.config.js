@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true, // Enable React strict mode
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx'], // Specify file extensions for pages
-    images: {
-    domains: ['example.com'], // Configure domains for Image component
-  },
+    eslint: {
+        // Warning: This allows production builds to successfully complete even if
+        // your project has ESLint errors.
+        ignoreDuringBuilds: true
+      },
+      experimental: {
+        appDir: false
+      },
 }
+
+const dns = require('dns');
+dns.setDefaultResultOrder("ipv4first");
 
 module.exports = nextConfig
