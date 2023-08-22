@@ -20,7 +20,7 @@ const OrdersPage = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["orders"],
     queryFn: () =>
-      fetch("http://127.0.0.1:3000/api/orders").then((res) => res.json()),
+      fetch(`${process.env.customKey}/api/orders`).then((res) => res.json()),
   });
 
   const queryClient = useQueryClient();
@@ -28,7 +28,7 @@ const OrdersPage = () => {
   const mutation = useMutation({
     mutationFn: async ({ id, status }: { id: string; status: string }) => {
   
-      const response = await fetch(`http://127.0.0.1:3000/api/orders/${id}`, {
+      const response = await fetch(`${process.env.customKey}/api/orders/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

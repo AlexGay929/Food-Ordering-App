@@ -11,7 +11,7 @@ const SuccessPage = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        await fetch(`http://127.0.0.1:3000/api/confirm/${payment_intent}`, {
+        await fetch(`${process.env.customKey}/api/confirm/${payment_intent}`, {
           method: "PUT",
         });
         setTimeout(() => {

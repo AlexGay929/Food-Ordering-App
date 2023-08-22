@@ -5,9 +5,10 @@ const nextConfig = {
         // your project has ESLint errors.
         ignoreDuringBuilds: true
       },
+      env: {
+        customKey: 'http://localhost:3000',
+      },
 }
 
-// const dns = require('dns');
-// dns.setDefaultResultOrder("ipv4first");
 
 module.exports = nextConfig;

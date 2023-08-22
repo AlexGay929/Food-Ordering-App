@@ -5,7 +5,7 @@ import { ProductType } from '@/types/types'
 import DeleteButton from '@/components/DeleteButton'
 
 const getData = async (id:string)=>{
-  const res = await fetch(`http://127.0.0.1:3000/api/products/${id}`,{
+  const res = await fetch(`${process.env.customKey}/api/products/${id}`,{
     cache:"no-store"
   })
 
