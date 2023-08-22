@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Price from '@/components/Price'
 import { ProductType } from '@/types/types'
 import DeleteButton from '@/components/DeleteButton'
+import axios from 'axios'
 
 const getData = async (id:string)=>{
-  const res = await fetch(`${process.env.customKey}/api/products/${id}`,{
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`,{
     cache:"no-store"
   })
 
@@ -15,7 +16,6 @@ const getData = async (id:string)=>{
 
   return res.json()
 }
-
 
 
 const SingleProductPage = async ({params}:{params:{id:string}}) => {

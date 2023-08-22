@@ -20,28 +20,26 @@ const OrdersPage = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["orders"],
     queryFn: () =>
-      fetch(`${process.env.customKey}/api/orders`).then((res) => res.json()),
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`).then((res) => res.json()),
   });
 
   const queryClient = useQueryClient();
-  
+
   const mutation = useMutation({
-    mutationFn: async ({ id, status }: { id: string; status: string }) => {
-  
-      const response = await fetch(`${process.env.customKey}/api/orders/${id}`, {
-        method: "PUT",
+    mutationFn: ({ id, status }: { id: string; status: string }) => {
+      return fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/${id}`, {
+        method:"PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ status }),
+        body: JSON.stringify(status),
       });
-      return response;
     },
     onSuccess() {
       queryClient.invalidateQueries({ queryKey: ["orders"] });
     },
   });
-    
+
   const handleUpdate = (e: React.FormEvent<HTMLFormElement>, id: string) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -51,7 +49,6 @@ const OrdersPage = () => {
     mutation.mutate({ id, status });
     toast.success("The order status has been changed!")
   };
-  
 
   if (isLoading || status === "loading") return "Loading...";
 

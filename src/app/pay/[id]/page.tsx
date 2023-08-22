@@ -4,7 +4,7 @@ import CheckoutForm from "@/components/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { StripeElementsOptions, loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
@@ -16,13 +16,13 @@ const PayPage = ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
   console.log(id)
-
+  
   useEffect(() => {
     console.log("orderId:", id); // Check if orderId is logged correctly
     const makeRequest = async () => {
       try {
         const res = await fetch(
-          `${process.env.customKey}/api/create-intent/${id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/create-intent/${id}`,
           {
             method: "POST",
           }

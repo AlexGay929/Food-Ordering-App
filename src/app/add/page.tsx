@@ -68,10 +68,10 @@ const AddPage = () => {
     data.append("file", file!);
     data.append("upload_preset", "restaurant");
 
-    const res = await fetch("https://api.cloudinary.com/v1_1/alexdev29/image/upload",{
+    const res = await fetch("https://api.cloudinary.com/v1_1/lamadev/image", {
       method: "POST",
       headers: { "Content-Type": "multipart/form-data" },
-      body: data
+      body: data,
     });
 
     const resData = await res.json();
@@ -83,7 +83,7 @@ const AddPage = () => {
 
     try {
       const url = await upload();
-      const res = await fetch(`${process.env.customKey}/api/products`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, {
         method: "POST",
         body: JSON.stringify({
           img: url,
@@ -107,10 +107,10 @@ const AddPage = () => {
           Add New Product
         </h1>
         <div className="w-full flex flex-col gap-2 ">
-             <label
+          <label
             className="text-sm cursor-pointer flex gap-4 items-center"
-            htmlFor="file" 
-          >  
+            htmlFor="file"
+          >
             <Image src="/upload.png" alt="" width={30} height={20} />
             <span>Upload Image</span>
           </label>
@@ -119,7 +119,7 @@ const AddPage = () => {
             onChange={handleChangeImg}
             id="file"
             className="hidden"
-          /> 
+          />
         </div>
         <div className="w-full flex flex-col gap-2 ">
           <label className="text-sm">Title</label>
