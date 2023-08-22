@@ -57,5 +57,6 @@ const PayPage = ({ params }: { params: { id: string } }) => {
   );
 };
 
+export const runtime = "edge";
 export default PayPage;
 

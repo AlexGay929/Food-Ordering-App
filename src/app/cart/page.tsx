@@ -93,4 +93,5 @@ const CartPage = () => {
   );
 };
 
+export const runtime = "edge";
 export default CartPage;

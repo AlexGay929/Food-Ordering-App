@@ -45,4 +45,5 @@ const CategoryPage = async ({params}:Props) => {
   );
 };
 
+export const runtime = "edge";
 export default CategoryPage;

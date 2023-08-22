@@ -38,4 +38,5 @@ const MenuPage = async () => {
   );
 };
 
+export const runtime = "edge";
 export default MenuPage;
