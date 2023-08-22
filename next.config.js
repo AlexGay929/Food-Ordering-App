@@ -6,7 +6,7 @@ const nextConfig = {
         ignoreDuringBuilds: true
       },
       experimental: {
-        appDir: false
+        appDir: 'src/app',
       },
 }
 
