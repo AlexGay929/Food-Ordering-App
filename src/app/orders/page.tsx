@@ -101,5 +101,5 @@ const OrdersPage = () => {
   );
 };
 
-export const runtime = "edge";
+
 export default OrdersPage;

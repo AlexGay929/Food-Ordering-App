@@ -40,5 +40,5 @@ const SingleProductPage = async ({params}:{params:{id:string}}) => {
   )
 }
 
-export const runtime = "edge";
+
 export default SingleProductPage

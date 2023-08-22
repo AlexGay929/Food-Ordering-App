@@ -213,5 +213,5 @@ const AddPage = () => {
   );
 };
 
-export const runtime = "edge";
+
 export default AddPage;
