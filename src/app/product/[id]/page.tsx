@@ -6,7 +6,7 @@ import DeleteButton from '@/components/DeleteButton'
 import axios from 'axios'
 
 const getData = async (id:string)=>{
-  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/src/app/api/products/${id}`,{
+  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/src/app/api/products/${id}.json`,{
     cache:"no-store"
   })
 
