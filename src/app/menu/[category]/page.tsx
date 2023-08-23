@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async (category:string)=>{
-  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/src/app/api/products?cat=${category}.json`,{
+  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/src/app/api/products/${category}.json`,{
     cache:"no-store"
   })
 
