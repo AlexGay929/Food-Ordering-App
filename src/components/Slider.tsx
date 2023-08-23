@@ -49,4 +49,5 @@ const Slider = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default Slider

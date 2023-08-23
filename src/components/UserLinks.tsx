@@ -19,4 +19,5 @@ const UserLinks = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default UserLinks

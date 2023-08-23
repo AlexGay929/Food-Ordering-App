@@ -43,4 +43,5 @@ const Menu = () => {
   );
 };
 
+export const dynamic = 'force-dynamic';
 export default Menu

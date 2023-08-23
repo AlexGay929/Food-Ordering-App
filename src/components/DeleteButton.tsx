@@ -39,4 +39,5 @@ const handleDelete = async () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default DeleteButton

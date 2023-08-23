@@ -15,4 +15,5 @@ const QueryProvider = ({children}: Props) => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default QueryProvider

@@ -6,4 +6,5 @@ const Notification = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default Notification

@@ -21,4 +21,5 @@ const Offer = () => {
   );
 };
 
+export const dynamic = 'force-dynamic';
 export default Offer

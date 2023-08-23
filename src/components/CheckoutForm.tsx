@@ -106,4 +106,5 @@ const CheckoutForm = () => {
   );
 };
 
+export const dynamic = 'force-dynamic';
 export default CheckoutForm;

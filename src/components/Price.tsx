@@ -72,4 +72,5 @@ function Price({ product }: { product: ProductType }) {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default Price

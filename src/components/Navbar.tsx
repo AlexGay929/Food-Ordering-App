@@ -37,4 +37,5 @@ const Navbar = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default Navbar

@@ -24,4 +24,5 @@ const CartIcon = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default CartIcon

@@ -10,4 +10,5 @@ const MyCountDown = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default MyCountDown

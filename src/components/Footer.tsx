@@ -10,4 +10,5 @@ const Footer = () => {
   )
 }
 
+export const dynamic = 'force-dynamic';
 export default Footer
