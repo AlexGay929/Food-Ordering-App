@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async ()=>{
-  const res = await fetch('https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/src/app/api/categories.json',{
+  const res = await fetch('https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/categories.json',{
     cache:"no-store"
   })
 
