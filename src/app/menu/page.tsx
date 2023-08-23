@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async ()=>{
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`,{
+  const res = await fetch('https://github.com/AlexGay929/Food-Ordering-App/src/app/api/categories',{
     cache:"no-store"
   })
 

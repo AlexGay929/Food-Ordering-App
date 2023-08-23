@@ -12,7 +12,7 @@ const SuccessPage = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/confirm/${payment_intent}`, {
+        await fetch(`https://github.com/AlexGay929/Food-Ordering-App/src/app/api/confirm/${payment_intent}`, {
           method: "PUT",
         });
         setTimeout(() => {

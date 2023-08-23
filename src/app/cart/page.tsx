@@ -19,7 +19,7 @@ const CartPage = () => {
       router.push("/login");
     } else {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
+        const res = await fetch('https://github.com/AlexGay929/Food-Ordering-App/src/app/api/orders', {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

@@ -83,7 +83,7 @@ const AddPage = () => {
 
     try {
       const url = await upload();
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, {
+      const res = await fetch('https://github.com/AlexGay929/Food-Ordering-App/src/app/api/products', {
         method: "POST",
         body: JSON.stringify({
           img: url,
