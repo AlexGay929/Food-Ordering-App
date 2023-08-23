@@ -101,4 +101,6 @@ const OrdersPage = () => {
   );
 };
  
+
+export const dynamic = 'force-dynamic';
 export default OrdersPage;

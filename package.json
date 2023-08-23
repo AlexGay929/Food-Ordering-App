@@ -6,10 +6,8 @@
     "dev": "next dev",
     "build": "prisma generate && next build",
     "postinstall": "prisma generate",
-    "start": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
-    "lint": "next lint",
-    "dev:frontend": "next dev --port 2000",
-    "dev:backend": "next dev --port 3000"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",

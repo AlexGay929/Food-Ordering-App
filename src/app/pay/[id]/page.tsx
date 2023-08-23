@@ -57,5 +57,7 @@ const PayPage = ({ params }: { params: { id: string } }) => {
   );
 };
  
+
+export const dynamic = 'force-dynamic';
 export default PayPage;
 

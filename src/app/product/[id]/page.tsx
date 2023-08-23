@@ -40,4 +40,6 @@ const SingleProductPage = async ({params}:{params:{id:string}}) => {
   )
 }
 
+
+export const dynamic = 'force-dynamic';
 export default SingleProductPage

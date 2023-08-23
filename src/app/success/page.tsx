@@ -40,4 +40,6 @@ const SuccessPage = () => {
   );
 };
  
+
+export const dynamic = 'force-dynamic';
 export default SuccessPage;

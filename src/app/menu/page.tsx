@@ -38,4 +38,6 @@ const MenuPage = async () => {
   );
 };
  
+
+export const dynamic = 'force-dynamic';
 export default MenuPage;

@@ -213,4 +213,6 @@ const AddPage = () => {
   );
 };
 
+
+export const dynamic = 'force-dynamic';
 export default AddPage;
