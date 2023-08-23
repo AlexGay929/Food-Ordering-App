@@ -1,4 +1,5 @@
 "use client";
+
 import { useCartStore } from "@/utils/store";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
@@ -19,7 +20,7 @@ const CartPage = () => {
       router.push("/login");
     } else {
       try {
-        const res = await fetch('https://github.com/AlexGay929/Food-Ordering-App/src/app/api/orders', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

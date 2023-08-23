@@ -22,7 +22,7 @@ const PayPage = ({ params }: { params: { id: string } }) => {
     const makeRequest = async () => {
       try {
         const res = await fetch(
-          `https://github.com/AlexGay929/Food-Ordering-App/src/app/api/create-intent/${id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/create-intent/${id}`,
           {
             method: "POST",
           }
