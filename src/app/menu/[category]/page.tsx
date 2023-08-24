@@ -3,22 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const getData = async (category: string) => {
-  const headers = new Headers({
-    Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`, // Replace with your GitHub access token
-  });
+const getData = async (category:string)=>{
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products?cat=${category}`,{
+    cache:"no-store"
+  })
 
-  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/products/${category}.json`, {
-    headers,
-    cache: "no-store"
-  });
-
-  if (!res.ok) {
-    throw new Error(`Failed: ${res.statusText}`);
+  if(!res.ok){
+    throw new Error("Failed!");
+    
   }
 
-  return res.json();
-};
+  return res.json()
+}
 
 type Props = {
   params:{category:string}

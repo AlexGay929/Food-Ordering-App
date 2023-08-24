@@ -94,5 +94,5 @@ const CartPage = () => {
   );
 };
 
- 
+export const dynamic = 'force-dynamic';
 export default CartPage;

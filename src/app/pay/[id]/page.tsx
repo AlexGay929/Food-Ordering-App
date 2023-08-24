@@ -4,7 +4,7 @@ import CheckoutForm from "@/components/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { StripeElementsOptions, loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
