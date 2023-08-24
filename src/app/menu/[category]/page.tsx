@@ -3,18 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const getData = async (category:string)=>{
-  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/products/${category}.json`,{
-    cache:"no-store"
-  })
+const getData = async (category: string) => {
+  const headers = new Headers({
+    Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`, // Replace with your GitHub access token
+  });
 
-  if(!res.ok){
+  const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/products/${category}.json`, {
+    headers,
+    cache: "no-store"
+  });
+
+  if (!res.ok) {
     throw new Error(`Failed: ${res.statusText}`);
-    
   }
 
-  return res.json()
-} 
+  return res.json();
+};
 
 type Props = {
   params:{category:string}

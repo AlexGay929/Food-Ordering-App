@@ -3,6 +3,10 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async ()=>{
+  const headers = new Headers({
+    Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`, // Replace with your GitHub access token
+  });
+
   const res = await fetch('https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/categories.json',{
     cache:"no-store"
   })

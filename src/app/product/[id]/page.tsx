@@ -3,9 +3,13 @@ import Image from 'next/image'
 import Price from '@/components/Price'
 import { ProductType } from '@/types/types'
 import DeleteButton from '@/components/DeleteButton'
-import axios from 'axios'
+
 
 const getData = async (id:string)=>{
+  const headers = new Headers({
+    Authorization : `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`, // Replace with your GitHub access token
+  });
+
   const res = await fetch(`https://raw.githubusercontent.com/AlexGay929/Food-Ordering-App/master/src/app/api/products/${id}.json`,{
     cache:"no-store"
   })
